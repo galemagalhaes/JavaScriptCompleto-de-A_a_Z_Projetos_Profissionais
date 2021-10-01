@@ -29,3 +29,6 @@ console.log(taxaDeJuros);
 let juros = valorEmprestimo * numAnos * taxaDeJuros; 
 let montante = valorEmprestimo + juros;
 console.log("Valor do montante é: " + montante);
+
+//operador ternário
+console.log("O cliente " + nome + (ehBomPagador ? " é bom pagador." : " não é bom pagador."));
