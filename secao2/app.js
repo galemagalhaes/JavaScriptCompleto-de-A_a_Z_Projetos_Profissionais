@@ -32,3 +32,19 @@ console.log("Valor do montante é: " + montante);
 
 //operador ternário
 console.log("O cliente " + nome + (ehBomPagador ? " é bom pagador." : " não é bom pagador."));
+
+for(let cont = 0; cont < 3; cont++){
+  valorEmprestimo = parseInt(prompt("Digite o valor do emprestimo."));
+  numAnos = parseInt(prompt("Digite o numero de anos"));
+  juros = valorEmprestimo * numAnos * taxaDeJuros; 
+  montante = valorEmprestimo + juros;
+  console.log("Valor do montante é: " + montante);
+}
+
+/*while(valorEmprestimo !=0){
+  valorEmprestimo = parseInt(prompt("Insira o valor do emprestimo"));
+  numAnos = parseInt(prompt("INsira o numero de anos"));
+  juros = valorEmprestimo * numAnos * taxaDeJuros; 
+  montante = valorEmprestimo + juros;
+  console.log("Valor do montante é: " + montante);
+}*/
