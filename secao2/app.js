@@ -43,7 +43,7 @@ for(let cont = 0; cont < 3; cont++){
 
 /*while(valorEmprestimo !=0){
   valorEmprestimo = parseInt(prompt("Insira o valor do emprestimo"));
-  numAnos = parseInt(prompt("INsira o numero de anos"));
+  numAnos = parseInt(prompt("Insira o numero de anos"));
   juros = valorEmprestimo * numAnos * taxaDeJuros; 
   montante = valorEmprestimo + juros;
   console.log("Valor do montante é: " + montante);
