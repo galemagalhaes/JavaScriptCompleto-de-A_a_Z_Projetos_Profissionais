@@ -31,13 +31,19 @@ function defineTaxa(idadeCliente){
       return 0.06;
     } 
 }
+function sauda(){
+  let saudacao = "Olá Sr. " + nome;
+  return saudacao;
+}
 
 cadastrarCliente("Manuel", "Silva", 24, 150000, 2, true);
 console.log(nome);
 console.log(sobrenome);
 console.log(taxaDeJuros);
+console.log(sauda());  // a função é acessível por ser de ESCOPO GLOBAL
 
 cadastrarCliente("Edval", "Silveira", 56, 150000, 9, false);
 console.log(nome);
 console.log(sobrenome);
 console.log(taxaDeJuros);
+//console.log(saudacao);   a variável está inacessível por ser de ESCOPO LOCAL
