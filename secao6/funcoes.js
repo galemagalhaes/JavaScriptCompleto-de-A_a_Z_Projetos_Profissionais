@@ -38,3 +38,18 @@ console.log(areaQuadrado3(8));
 //mais simples ainda
 const areaQuadrado4 = lado => lado * lado;
 console.log(areaQuadrado4(9));
+
+
+//-------------------------------------><-----------------------------------------//
+
+//parametros rest
+/**function nomeFunction(...params){
+ * console.log(params);
+ * } */
+
+function exibeNumeros(...numeros){
+  console.log(numeros);
+}
+exibeNumeros(1);
+exibeNumeros(2,3,4);
+exibeNumeros(5,6,7,8,9,10,11,12,13,14,15);

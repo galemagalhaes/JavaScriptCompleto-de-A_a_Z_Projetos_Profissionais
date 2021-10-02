@@ -46,5 +46,6 @@ console.log(sauda());  // a função é acessível por ser de ESCOPO GLOBAL
 cadastrarCliente("Edval", "Silveira", 56, 150000, 9, false);
 console.log(nome);
 console.log(sobrenome);
-console.log(taxaDeJuros);
+console.log(numAnos);
+console.log(ehBomPagador);
 //console.log(saudacao);   a variável está inacessível por ser de ESCOPO LOCAL
