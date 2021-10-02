@@ -9,8 +9,8 @@ let taxaDeJuros;
 let numAnos;
 let ehBomPagador;
 
-function cadastrarCliente(nomeCliente, sobrenomeCliente, idadeCliente, valorEmprestimoCliente, 
-    numAnosCliente, ehBomPagadorCliente) {
+function cadastrarCliente(nomeCliente, sobrenomeCliente, idadeCliente, valorEmprestimoCliente, //parametros normais
+    numAnosCliente = 2, ehBomPagadorCliente = false) {   //parametros default
       nome = nomeCliente;
       sobrenome = sobrenomeCliente;
       idade = idadeCliente;
@@ -36,10 +36,11 @@ function sauda(){
   return saudacao;
 }
 
-cadastrarCliente("Manuel", "Silva", 24, 150000, 2, true);
+cadastrarCliente("Manuel", "Silva", 24, 150000);
 console.log(nome);
 console.log(sobrenome);
-console.log(taxaDeJuros);
+console.log(numAnos);
+console.log(ehBomPagador);
 console.log(sauda());  // a função é acessível por ser de ESCOPO GLOBAL
 
 cadastrarCliente("Edval", "Silveira", 56, 150000, 9, false);
