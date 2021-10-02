@@ -8,9 +8,10 @@ let valorEmprestimo;
 let taxaDeJuros;
 let numAnos;
 let ehBomPagador;
+let avalistas;
 
 function cadastrarCliente(nomeCliente, sobrenomeCliente, idadeCliente, valorEmprestimoCliente, //parametros normais
-    numAnosCliente = 2, ehBomPagadorCliente = false) {   //parametros default
+     numAnosCliente = 2, ehBomPagadorCliente = false, avalistaCliente) {   //parametros default
       nome = nomeCliente;
       sobrenome = sobrenomeCliente;
       idade = idadeCliente;
@@ -18,6 +19,7 @@ function cadastrarCliente(nomeCliente, sobrenomeCliente, idadeCliente, valorEmpr
       numAnos = numAnosCliente;
       ehBomPagador = ehBomPagadorCliente;
       taxaDeJuros = defineTaxa(idadeCliente);
+      avalistas = avalistaCliente;
 }
 
 function defineTaxa(idadeCliente){
@@ -43,9 +45,12 @@ console.log(numAnos);
 console.log(ehBomPagador);
 console.log(sauda());  // a função é acessível por ser de ESCOPO GLOBAL
 
-cadastrarCliente("Edval", "Silveira", 56, 150000, 9, false);
+cadastrarCliente("Edval", "Silveira", 56, 150000, 9, false, ["Manuel", "Raphael", "Bruno"]);
 console.log(nome);
-console.log(sobrenome);
-console.log(numAnos);
-console.log(ehBomPagador);
+console.log(avalistas);
+console.log(avalistas[0]);
+console.log(avalistas[1]);
+//console.log(sobrenome);
+//console.log(numAnos);
+//console.log(ehBomPagador);
 //console.log(saudacao);   a variável está inacessível por ser de ESCOPO LOCAL
