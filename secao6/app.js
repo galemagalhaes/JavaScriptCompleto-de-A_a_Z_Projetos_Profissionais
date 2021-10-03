@@ -54,3 +54,27 @@ console.log(avalistas[1]);
 //console.log(numAnos);
 //console.log(ehBomPagador);
 //console.log(saudacao);   a variável está inacessível por ser de ESCOPO LOCAL
+
+function adicionaAvalista(avalista){
+  avalistas.push(avalista);
+}
+function removeAvalista(){
+  avalistas.pop();
+}
+function editaAvalista(nomeAvalista, indice){
+  avalistas[indice] = nomeAvalista;
+}
+function ordenaAvalista(){
+  return avalistas.sort();
+}
+
+adicionaAvalista("Andrew");
+adicionaAvalista("José");
+adicionaAvalista("Marcos");
+console.log(avalistas);
+removeAvalista();
+removeAvalista();
+console.log(avalistas);
+editaAvalista("Manuel Silva", 0);
+ordenaAvalista();
+console.log(avalistas);
