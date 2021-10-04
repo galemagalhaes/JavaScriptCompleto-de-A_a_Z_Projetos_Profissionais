@@ -55,7 +55,7 @@ function defineTaxa(idadeCliente){
     } 
 }
 
-const cliente1 = cadastrarCliente("Edval", "Silveira", 56, 150000, 9, false, ["Manuel", "Raphael", "Bruno"]);
+
 /* cliente1.adicionaAvalista("José");
 cliente1.adicionaAvalista("Marcos");
 cliente1.removeAvalista();
@@ -67,6 +67,11 @@ cliente1.exibeAvalistas(); */
 cliente.numeros = 1; // adiciona propriedade
 delete cliente.numeros; // deleta/remove propriedade */
 
+function credenciaisInvalidas(mensagem){  //criada uma excecão personalizada
+  this.nome = "Credenciais inválidas";
+  this.mensagem = mensagem;
+}
+
 function adicionaInfLogin(cliente, email, senha){
   if(email.indexOf("@") !== -1 && senha.length > 5){
     cliente.login = {
@@ -75,9 +80,19 @@ function adicionaInfLogin(cliente, email, senha){
     }    
     return cliente;    
   } else {
-    return "Credenciais inválidas";
+    throw new credenciaisInvalidas("Os dados são inválidos, não seguem o padrão exigido."); //nova instância da exceção personalizada
   }
 }
-console.log(adicionaInfLogin(cliente1, "edval@email.com", "ed12345"));
+try{
+  const cliente1 = cadastrarCliente("Edval", "Silveira", 56, 150000, 9, false, ["Manuel", "Raphael", "Bruno"]);
+  console.log(adicionaInfLogin(cliente1, "edval@email.com", "ed1234"));
+} catch(erro){
+  console.log(erro);
+  console.log("Nome", erro.nome);
+  console.log("Mensagem", erro.mensagem);
+}finally{
+  console.log("Deseja realizar uma nova operação?")
+}
+
 //console.log(adicionaInfLogin(cliente1, "edval.email.com", "ed12345"));
 //console.log(adicionaInfLogin(cliente1, "edval@email.com", "345"));
