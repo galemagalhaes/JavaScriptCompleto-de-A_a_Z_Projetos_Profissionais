@@ -1,4 +1,4 @@
-//metodos de arrays 
+/* //metodos de arrays 
 
 //MAP()
 const numeros = [10, 20, 30, 40, 50];
@@ -44,4 +44,20 @@ for(let fruta of frutas){
 frutas.forEach((fruta, indice) => {
   console.log(fruta);
   console.log("Fruta " + indice + ": " + fruta);
+}); */
+
+//ARRAYS BIDIMENSIONAIS
+const clientes = [["Manuel", 24, true], ["Edval", 24, false], ["Raphael", 19, true]];
+console.table(clientes);
+console.log(clientes[1][0]);
+console.log(clientes[1][1]);
+clientes.push(["Bruno", 27, false]);
+console.table(clientes);
+
+//Percorrendo Arrays multidimensionais
+const quadroDeFuncionarios = [["Financeiro", "Kilma", "Danilo"], ["Marketing", "Sarah", "Letícia"], ["Diretoria", "Keila", "Marcos"]];
+quadroDeFuncionarios.forEach((departamento, indiceDep) => {
+  departamento.forEach((funcionario, indiceDep) => {
+    console.log(`${indiceDep + 1} - ${funcionario}`);
+  });
 });
