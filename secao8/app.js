@@ -19,7 +19,25 @@ function cadastrarCliente(nomeCliente, sobrenomeCliente, idadeCliente, valorEmpr
             ehBomPagador: ehBomPagadorCliente,
             taxaDeJuros: defineTaxa(idadeCliente),
             avalistas: avalistaCliente
+          },
+          adicionaAvalista: function(avalista){
+            this.emprestimo.avalistas.push(avalista);
+          },
+          removeAvalista: function(){
+            this.emprestimo.avalistas.pop()
+          },
+          editaAvalista: function(nomeAvalista, indice){
+            this.emprestimo.avalistas[indice] = nomeAvalista;
+          },
+          ordenaAvalista: function(){
+            this.emprestimo.avalistas.sort();
+          },
+          exibeAvalistas: function(){
+            this.emprestimo.avalistas.forEach((avalista, indice) => {
+              console.log(`O ${indice + 1}º avalista é ${avalista}`);
+            })
           }
+
         
       }
       return cliente;         
@@ -38,7 +56,13 @@ function defineTaxa(idadeCliente){
 }
 
 const cliente1 = cadastrarCliente("Edval", "Silveira", 56, 150000, 9, false, ["Manuel", "Raphael", "Bruno"]);
-console.log(cliente1);
+cliente1.adicionaAvalista("José");
+cliente1.adicionaAvalista("Marcos");
+cliente1.removeAvalista();
+cliente1.editaAvalista("Manoel Silva", 0);
+cliente1.ordenaAvalista();
+cliente1.exibeAvalistas();
 
+/* console.log(cliente1);
 cliente.numeros = 1; // adiciona propriedade
-delete cliente.numeros; // deleta/remove propriedade
+delete cliente.numeros; // deleta/remove propriedade */
