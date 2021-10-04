@@ -21,3 +21,27 @@ console.log(numeroRetornado2);
 const nomes = ["Manuel", "Edval", "Bruno", "José", "Caio", "Pedro"];
 let indiceAleatorio = Math.floor(Math.random() * 6);
 console.log(nomes[indiceAleatorio]);
+
+//percorrer arrays usando FOR
+let frutas = ["maçã", "abacaxi", "laranja", "maracujá", "morango", "figo"];
+
+//1 - FOR tradicional
+for(let i = 0; i < frutas.length; i++) {
+  console.log(frutas[i]);
+}
+
+//FOR IN
+for(let indice in frutas){
+  console.log(frutas[indice]);
+}
+
+//FOR OF
+for(let fruta of frutas){
+  console.log(fruta);
+}
+
+//FOREACH
+frutas.forEach((fruta, indice) => {
+  console.log(fruta);
+  console.log("Fruta " + indice + ": " + fruta);
+});
