@@ -16,3 +16,8 @@ let numeroRetornado = numerosFind.find((numerosFind) => numerosFind > 25);
 console.log(numeroRetornado);
 let numeroRetornado2 = numerosFind.findIndex((numerosFind) => numerosFind > 25);
 console.log(numeroRetornado2);
+
+//MATH, RANDOM E FLOOR
+const nomes = ["Manuel", "Edval", "Bruno", "José", "Caio", "Pedro"];
+let indiceAleatorio = Math.floor(Math.random() * 6);
+console.log(nomes[indiceAleatorio]);
