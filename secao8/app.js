@@ -9,20 +9,20 @@ let avalistas;
 
 function cadastrarCliente(nomeCliente, sobrenomeCliente, idadeCliente, valorEmprestimoCliente, 
      numAnosCliente = 2, ehBomPagadorCliente = false, avalistaCliente) {   
-      cliente = {
-        nome: nomeCliente,
-        sobrenome: sobrenomeCliente,
-        idade: idadeCliente,
-        emprestimo: {
-          valorEmprestimo: valorEmprestimoCliente,
-          numAnos: numAnosCliente,
-          ehBomPagador: ehBomPagadorCliente,
-          taxaDeJuros: defineTaxa(idadeCliente),
-          avalistas: avalistaCliente
-        }
+        cliente = {
+          nome: nomeCliente,
+          sobrenome: sobrenomeCliente,
+          idade: idadeCliente,
+          emprestimo: {
+            valorEmprestimo: valorEmprestimoCliente,
+            numAnos: numAnosCliente,
+            ehBomPagador: ehBomPagadorCliente,
+            taxaDeJuros: defineTaxa(idadeCliente),
+            avalistas: avalistaCliente
+          }
         
       }
-      return cliente;
+      return cliente;         
 }
 
 function defineTaxa(idadeCliente){
@@ -39,3 +39,6 @@ function defineTaxa(idadeCliente){
 
 const cliente1 = cadastrarCliente("Edval", "Silveira", 56, 150000, 9, false, ["Manuel", "Raphael", "Bruno"]);
 console.log(cliente1);
+
+cliente.numeros = 1; // adiciona propriedade
+delete cliente.numeros; // deleta/remove propriedade
